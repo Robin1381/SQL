@@ -1,0 +1,39 @@
+/**Clothing_Store_Inventory:
+shirts (50)
+shorts (50)
+leggings (50)
+hoodies (50)
+sweaters (50)
+jeans (50)
+tanks (50)
+dresses (50)
+skirts (50)
+socks (50)
+hats (50)
+capris (50)
+crop tops (50)
+sunglasses (25)
+necklaces (25)
+**/
+
+--create database for a clothing store.
+CREATE TABLE Inventory (id INTEGER PRIMARY KEY, item TEXT, units INTEGER, cost INTEGER, price INTEGER);
+
+INSERT INTO inventory VALUES (1, "shirts", 50, 15, 25);
+INSERT INTO inventory VALUES (2, "shorts", 50, 15, 25);
+INSERT INTO inventory VALUES (3, "leggings", 50, 15, 25);
+INSERT INTO inventory VALUES (4, "jeans", 50, 25, 17);
+INSERT INTO inventory VALUES (6, "dresses", 50, 20, 35);
+INSERT INTO inventory VALUES (7, "skirts", 50, 15, 25);
+INSERT INTO inventory VALUES (8, "socks", 75, 6, 11);
+INSERT INTO inventory VALUES (9, "hats", 20, 8, 13);
+INSERT INTO inventory VALUES (10, "capris", 50, 15, 25);
+INSERT INTO inventory VALUES (11, "crop tops", 50, 12, 23);
+INSERT INTO inventory VALUES (12, "sunglasses", 20, 9, 11);
+
+--display the database ordered by price.
+SELECT * FROM inventory ORDER BY price DESC;
+
+--what is the potential total of sales from all inventory?
+SELECT item, (cost*units) AS potential_sales FROM inventory;
+
